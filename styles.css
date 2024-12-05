@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg,rgb(98, 98, 99),rgb(255, 253, 254));
+    padding: 10px;
+   
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg,rgb(6, 5, 6),rgb(44, 44, 45));
+    border-radius: 10px;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border: 2px solid #dddddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #f0e9e9;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    background: linear-gradient(135deg,rgb(240, 236, 240),rgb(44, 44, 45));
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: #f0e9e9;
+}
+
+button:hover {
+    background: linear-gradient(135deg,rgb(254, 252, 254),rgb(248, 243, 243));
+}
+
+button:active {
+    background-color: #a0a0a0;
+}
+
+button:nth-child(4n) {
+    background: linear-gradient(135deg,rgb(245, 92, 46),rgb(94, 94, 101));
+    color: white;
+}
+
+button:nth-child(4n):hover {
+    background: linear-gradient(135deg,rgb(25, 183, 46),rgb(94, 94, 101));
+}
+
+button:nth-child(16) {
+    background-color: #4caf50;
+    color: white;
+}
+
+button:nth-child(16):hover {
+    background-color: #45a045;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #display {
+        font-size: 20px;
+        height: 40px;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 15px;
+    }
+    
+    #display {
+        font-size: 18px;
+        height: 35px;
+    }
+    
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
